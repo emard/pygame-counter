@@ -4,8 +4,6 @@
 # LICENSE=GPL
 
 import pygame
-import struct
-import socket
 
 pygame.init()
 width = 1024
