@@ -5,6 +5,8 @@
 
 import pygame
 
+counter_file = "counter.txt"
+
 pygame.init()
 width = 1024
 height = width // 4
@@ -23,7 +25,7 @@ def show_display():
     pygame.display.flip()
 
 try:
-  f = open("counter.txt", "r")
+  f = open(counter_file, "r")
   counter = int(f.readline())
   f.close()
   del f
@@ -48,7 +50,7 @@ while(True):
       counter = (counter // 10) * 10 + ((counter + 1) % 10)
     counter %= 100000
     show_display()
-    f = open("counter.txt", "w")
+    f = open(counter_file, "w")
     f.seek(0)
     f.write("%05d\n" % counter)
     f.close()
