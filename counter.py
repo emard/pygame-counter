@@ -36,6 +36,8 @@ show_display()
 while(True):
   event = pygame.event.wait()
   if event.type == pygame.KEYDOWN:
+    if event.key == pygame.K_ESCAPE:
+      break
     if event.key == pygame.K_SPACE:
       counter += 1
     if event.key == pygame.K_1:
@@ -55,6 +57,4 @@ while(True):
     f.write("%05d\n" % counter)
     f.close()
     del f
-    if event.key == pygame.K_PAUSE:
-      break
     continue

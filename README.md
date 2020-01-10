@@ -14,4 +14,4 @@ Run the counter:
 
 Press "SPACE" to increment counter.
 Press "1-5" to set each counter digit.
-Press "PAUSE" to exit counter.
+Press "ESC" to exit counter.
