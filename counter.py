@@ -8,7 +8,8 @@ import struct
 import socket
 
 pygame.init()
-(width, height) = (512, 128)
+width = 1024
+height = width // 4
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption(u'Press PAUSE to quit')
 pygame.display.flip()
@@ -26,10 +27,10 @@ try:
   f = open("counter.txt", "r")
   counter = int(f.readline())
   f.close()
+  del f
 except:
   counter = 0
 
-f = open("counter.txt", "w+")
 show_display()
 while(True):
   event = pygame.event.wait()
@@ -48,9 +49,11 @@ while(True):
       counter = (counter // 10) * 10 + ((counter + 1) % 10)
     counter %= 100000
     show_display()
+    f = open("counter.txt", "w")
     f.seek(0)
     f.write("%05d\n" % counter)
+    f.close()
+    del f
     if event.key == pygame.K_PAUSE:
-      f.close()
       break
     continue
