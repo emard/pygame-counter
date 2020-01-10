@@ -15,7 +15,7 @@ pygame.display.set_caption(u'Press PAUSE to quit')
 pygame.display.flip()
 pygame.event.set_grab(True)
 pygame.mouse.set_visible(False)
-font = pygame.font.SysFont('DSEG14 Classic', height)
+font = pygame.font.SysFont('DSEG7 Classic', height)
 
 def show_display():
     text = str("%05d" % counter)
