@@ -11,7 +11,7 @@ pygame.init()
 width = 1024
 height = width // 4
 screen = pygame.display.set_mode((width, height))
-pygame.display.set_caption(u'Press PAUSE to quit')
+pygame.display.set_caption(u'Press ESC to quit')
 pygame.display.toggle_fullscreen()
 pygame.display.flip()
 pygame.event.set_grab(True)
