@@ -9,7 +9,7 @@ counter_file = "counter.txt"
 
 pygame.init()
 width = 1024
-height = width // 4
+height = width * 5 // 20 - width // 256
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption(u'Press ESC to quit')
 pygame.display.toggle_fullscreen()
@@ -40,6 +40,8 @@ while(True):
       break
     if event.key == pygame.K_SPACE:
       counter += 1
+    if event.key == pygame.K_f:
+      pygame.display.toggle_fullscreen()
     if event.key == pygame.K_1:
       counter += 10000
     if event.key == pygame.K_2:
