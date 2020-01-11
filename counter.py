@@ -16,7 +16,7 @@ pygame.display.toggle_fullscreen()
 pygame.display.flip()
 pygame.event.set_grab(True)
 pygame.mouse.set_visible(False)
-font = pygame.font.SysFont('DSEG7 Classic', height)
+font = pygame.font.SysFont('DSEG7 Classic', height, bold=True, italic=True)
 
 def show_display():
     text = str("%05d" % counter)
